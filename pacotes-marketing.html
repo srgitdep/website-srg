@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pacotes de Marketing Digital - SRG | Escolha o plano ideal para sua empresa">
+    <meta name="keywords" content="marketing digital moçambique, pacotes marketing digital, srg marketing, agencia marketing maputo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pacotes de Marketing Digital - SRG | Soluções Completas para Seu Negócio">
+    <meta property="og:description" content="Escolha entre nossos pacotes de marketing digital: S-DIGITAL HOME, R-STRATEGIC GROWTH ou G-360 TOTAL DOMAIN">
+    <meta property="og:image" content="https://srg.co.mz/assets/custom/images/srg.png">
+    
+    <title>Pacotes de Marketing Digital - SRG</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/custom/images/srg.png" type="image/png">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- CSS Específico para esta página -->
+    <style>
+        :root {
+            --home-color: #10B981; /* Verde para HOME */
+            --growth-color: #3B82F6; /* Azul para GROWTH */
+            --total-color: #8B5CF6; /* Roxo para TOTAL */
+            --primary: #6a1b62;
+            --secondary: #ffcc00;
+            --light: #f9f4f9;
+            --dark: #4a1244;
+            --gray: #f0e6ef;
+            --srg-yellow: #FFD400;
+            --whatsapp-green: #25d366;
+            --whatsapp-dark: #128C7E;
+        }
+        
+        /* Estilos específicos para os pacotes */
+        .packages-hero {
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, rgba(106, 27, 98, 0.1) 0%, rgba(255, 204, 0, 0.1) 100%);
+            text-align: center;
+        }
+        
+        .packages-hero h1 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .packages-hero p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .package-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0 30px;
+            flex-wrap: wrap;    
+        }
+        
+        .package-nav-btn {
+            padding: 12px 25px;
+            border: 2px solid var(--secondary);
+            background: white;
+            color: var(--primary);
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .package-nav-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .package-nav-btn.active {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+        
+        /* Design dos pacotes - igual ao exemplo */
+        .package-content-section {
+            padding: 40px 0;
+        }
+        
+        .package-content {
+            display: none;
+        }
+        
+        .package-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .feature-icon {
+            background-color: var(--secondary);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .feature-header h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content ul {
+            list-style-type: none;
+        }
+        
+        .feature-content li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--gray);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .feature-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-content li i {
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+        
+        /* Bonus Section */
+        .bonus-section {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(106, 27, 98, 0.2);
+        }
+        
+        .bonus-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .bonus-icon {
+            background-color: var(--secondary);
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .bonus-section h3 {
+            font-size: 26px;
+            color: white;
+        }
+        
+        .bonus-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .bonus-content li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .bonus-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .bonus-content i {
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+        
+        /* Price Section */
+        .price-section {
+            text-align: center;
+            padding: 40px 0;
+            background-color: white;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--secondary);
+        }
+        
+        .price-tag {
+            font-size: 70px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .price-tag small {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        
+        .price-text {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--dark));
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(106, 27, 98, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(106, 27, 98, 0.4);
+        }
+        
+        .price-note {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #888;
+            font-style: italic;
+        }
+        
+        /* Tabela Comparativa */
+        .comparison-section {
+            padding: 60px 0;
+            background: var(--light);
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 20px;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 20px;
+            align-items: center;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .comparison-row:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .check {
+            color: var(--home-color);
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .check.growth {
+            color: var(--growth-color);
+        }
+        
+        .check.total {
+            color: var(--total-color);
+        }
+        
+        .cross {
+            color: #EF4444;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        /* CTA Final */
+        .final-cta {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(106, 27, 98, 0.1) 0%, rgba(255, 204, 0, 0.1) 100%);
+        }
+        
+        /* Responsivo */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-header, .comparison-row {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .packages-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .price-tag {
+                font-size: 50px;
+            }
+            
+            .price-tag small {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            
+            .feature-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .comparison-header, .comparison-row {
+                font-size: 12px;
+                grid-template-columns: 1.5fr 0.8fr 0.8fr 0.8fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .package-navigation {
+                flex-direction: column;
+            }
+            
+            .comparison-header, .comparison-row {
+                grid-template-columns: 1.2fr 0.7fr 0.7fr 0.7fr;
+                font-size: 11px;
+            }
+        }
+        
+        /* Badge para pacote em destaque */
+        .package-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            z-index: 2;
+        }
+
+        /* CORREÇÕES PARA TEXTO COM BOM CONTRASTE */
+        .comparison-header div:nth-child(2) {
+            color: #0D8C68 !important;
+            font-weight: 700;
+        }
+
+        .comparison-header div:nth-child(3) {
+            color: #1D4ED8 !important;
+            font-weight: 700;
+        }
+
+        .comparison-header div:nth-child(4) {
+            color: #7C3AED !important;
+            font-weight: 700;
+        }
+
+        .check {
+            color: #059669 !important;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .check.growth {
+            color: #2563EB !important;
+        }
+
+        .check.total {
+            color: #7C3AED !important;
+        }
+
+        .comparison-row div:not(.feature-name) {
+            color: #1F2937 !important;
+            font-weight: 600;
+        }
+
+        .comparison-row:nth-child(even) {
+            background-color: #F9FAFB !important;
+        }
+
+        .comparison-section h2 {
+            color: #4a1244 !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .comparison-section p {
+            color: #4B5563 !important;
+        }
+
+        .comparison-row {
+            border-bottom: 2px solid #E5E7EB !important;
+        }
+
+        .feature-name {
+            font-weight: 600;
+            color: #111827 !important;
+        }
+
+        .feature-content li i {
+            color: #8B5CF6 !important;
+        }
+
+        .bonus-content i {
+            color: #FFCC00 !important;
+        }
+
+        .package-nav-btn[data-package="s-digital-home"] {
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 2px solid #0D8C68;
+            color: #0D8C68;
+        }
+
+        .package-nav-btn[data-package="r-strategic-growth"] {
+            background-color: rgba(59, 130, 246, 0.1);
+            border: 2px solid #2563EB;
+            color: #2563EB;
+        }
+
+        .package-nav-btn[data-package="g-360-total-domain"] {
+            background-color: rgba(139, 92, 246, 0.1);
+            border: 2px solid #7C3AED;
+            color: #7C3AED;
+        }
+
+        #s-digital-home .feature-content li i {
+            color: #059669 !important;
+        }
+
+        #r-strategic-growth .feature-content li i {
+            color: #2563EB !important;
+        }
+
+        #g-360-total-domain .feature-content li i {
+            color: #7C3AED !important;
+        }
+
+        .packages-hero h1 {
+            color: #4a1244 !important;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-content span,
+        .bonus-content span {
+            color: #374151 !important;
+        }
+
+        .price-tag {
+            color: #4a1244 !important;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .price-text {
+            color: #6B7280 !important;
+        }
+
+        .price-note {
+            color: #9CA3AF !important;
+        }
+
+        /* CSS PARA ALINHAMENTO PERFEITO DA TABELA */
+        .comparison-section {
+            padding: 60px 0;
+            background: var(--light);
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            background-color: #F3F4F6;
+            color: #111827;
+            font-weight: 700;
+            padding: 20px;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #D1D5DB;
+            text-align: center;
+        }
+
+        .comparison-header div:first-child {
+            text-align: left;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 20px;
+            align-items: center;
+            border-bottom: 2px solid #E5E7EB !important;
+            min-height: 60px;
+        }
+
+        .comparison-row:nth-child(even) {
+            background-color: #F9FAFB !important;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .feature-name {
+            font-weight: 600;
+            color: #111827 !important;
+            font-size: 1rem;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .comparison-row > div:not(:first-child) {
+            text-align: center !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+        }
+
+        .check, .check.growth, .check.total, .cross {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .check i, .cross i {
+            display: inline-block;
+            text-align: center;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+        }
+
+        .comparison-row div:not(.feature-name):not(.check):not(.cross):not(.check.growth):not(.check.total) {
+            color: #1F2937 !important;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .comparison-header, .comparison-row {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                font-size: 14px;
+                padding: 15px;
+            }
+            
+            .comparison-row > div:not(:first-child) {
+                padding: 0 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .comparison-header, .comparison-row {
+                font-size: 12px;
+                grid-template-columns: 1.5fr 0.8fr 0.8fr 0.8fr;
+                padding: 12px;
+            }
+            
+            .feature-name {
+                font-size: 12px;
+                padding-left: 5px;
+            }
+            
+            .comparison-row div:not(.feature-name):not(.check):not(.cross):not(.check.growth):not(.check.total) {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .comparison-header, .comparison-row {
+                grid-template-columns: 1.2fr 0.7fr 0.7fr 0.7fr;
+                font-size: 11px;
+                padding: 10px;
+            }
+        }
+
+        /* Botões de WhatsApp com efeito de clique */
+        .whatsapp-pulse {
+            animation: whatsappPulse 2s infinite;
+        }
+        
+        @keyframes whatsappPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* MODAIS DO SISTEMA */
+        .whatsapp-modal, .consultoria-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .modal-icon {
+            font-size: 60px;
+            color: #25D366;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+        }
+        
+        /* OPÇÕES DE CONSULTORIA */
+        .consultoria-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .option-card {
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .option-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .option-card.selected {
+            border-color: var(--primary);
+            background: rgba(106, 27, 98, 0.05);
+        }
+        
+        .option-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .whatsapp-option .option-icon {
+            color: #25D366;
+        }
+        
+        .email-option .option-icon {
+            color: var(--primary);
+        }
+        
+        /* FORMULÁRIO DE CONSULTORIA */
+        .consultoria-form {
+            display: none;
+        }
+        
+        .consultoria-form.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media (max-width: 576px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: var(--dark);
+        }
+        
+        .back-btn {
+            background: #666;
+            margin-top: 10px;
+        }
+        
+        .back-btn:hover {
+            background: #555;
+        }
+        
+        /* MENSAGENS DE STATUS */
+        .status-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            display: none;
+        }
+        
+        .status-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #34d399;
+        }
+        
+        .status-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #f87171;
+        }
+        
+        .status-loading {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #f59e0b;
+        }
+        
+        /* Botão fixo para WhatsApp */
+        .whatsapp-fixed-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .whatsapp-fixed-btn:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp-green);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+            z-index: 99;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #20b859;
+        }
+
+        /* Footer Dinâmico com Efeito Network */
+        .dynamic-footer {
+            position: relative;
+            background: #030303;
+            color: #fff;
+            padding: 80px 0 30px;
+            margin-top: 80px;
+            overflow: hidden;
+            border-top: 3px solid var(--srg-yellow);
+        }
+
+        #networkCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 212, 0, 0.15) 0%, transparent 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-logo-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(255, 212, 0, 0.5));
+        }
+
+        .footer-description {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .footer-title {
+            color: var(--srg-yellow);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--srg-yellow);
+            box-shadow: 0 0 15px var(--srg-yellow);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a i {
+            color: var(--srg-yellow);
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--srg-yellow);
+            transform: translateX(5px);
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(3px);
+        }
+
+        .contact-info {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            color: #ccc;
+        }
+
+        .contact-info i {
+            color: var(--srg-yellow);
+            font-size: 1.2rem;
+            min-width: 25px;
+            margin-top: 3px;
+        }
+
+        .contact-info p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--srg-yellow);
+        }
+
+        /* Redes Sociais com efeitos */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            border: 1px solid rgba(255, 212, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 212, 0, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+            z-index: -1;
+        }
+
+        .social-link:hover {
+            color: black;
+            border-color: var(--srg-yellow);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(255, 212, 0, 0.4);
+        }
+
+        .social-link:hover::before {
+            width: 100%;
+            height: 100%;
+            background: var(--srg-yellow);
+        }
+
+        .social-link:hover i {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            position: relative;
+            z-index: 2;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 212, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 20px;
+        }
+
+        .badge-item {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        .badge-item:hover {
+            color: var(--srg-yellow);
+        }
+
+        .badge-item i {
+            font-size: 1rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                z-index: 1000;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER FIXO -->
+    <header class="fixed-header">
+        <div class="container nav-container">
+            <div class="brand">
+                <a href="index.html"><img src="assets/custom/images/srg.png" alt="SRG" height="44" loading="lazy"></a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="index.html#logistica">Logística</a></li>
+                    <li><a href="index.html#procurement">Procurement</a></li>
+                    <li><a href="index.html#marketing-digital">Agência de Marketing</a></li>
+                    <li><a href="index.html#protecao-dados">Tecnologia e Sistemas</a></li>
+                    <li><a class="cta" href="#contact">Contacte-nos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/258847965281?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20pacotes%20de%20marketing%20digital" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão fixo adicional -->
+    <div class="whatsapp-fixed-btn whatsapp-pulse" onclick="openWhatsApp('Consultoria')">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Modal para WhatsApp -->
+    <div id="whatsappModal" class="whatsapp-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3 style="color: #4a1244; text-align: center;">Redirecionando para WhatsApp</h3>
+            <p id="modalMessage" style="color: #666; margin: 15px 0; text-align: center;">Aguarde um momento...</p>
+            <p style="color: #888; font-size: 14px; text-align: center;">Se o WhatsApp não abrir automaticamente, verifique se o aplicativo está instalado.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Agendar Consultoria -->
+    <div id="consultoriaModal" class="consultoria-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeConsultoriaModal()">&times;</button>
+          
+            <p style="color: #666; text-align: center; margin-bottom: 25px;">Escolha como prefere agendar sua consultoria gratuita:</p>
+            
+            <!-- Opções de Consultoria -->
+            <div id="consultoriaOptions" class="consultoria-options">
+                <div class="option-card whatsapp-option" onclick="selectOption('whatsapp')">
+                    <div class="option-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 style="color: #25D366;">WhatsApp Rápido</h4>
+                    <p style="color: #666; font-size: 14px;">Conversa imediata com nossa equipe para agendamento rápido.</p>
+                </div>
+                
+                <div class="option-card email-option" onclick="selectOption('email')">
+                    <div class="option-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 style="color: var(--primary);">Agendamento Formal</h4>
+                    <p style="color: #666; font-size: 14px;">Preencha o formulário e receba confirmação por email.</p>
+                </div>
+            </div>
+            
+            <!-- Botões de Ação -->
+            <div style="text-align: center; margin-top: 25px;">
+                <button id="confirmBtn" class="submit-btn" onclick="confirmOption()" style="display: none;">
+                    Confirmar Escolha
+                </button>
+            </div>
+            
+            <!-- Formulário de Email -->
+            <div id="consultoriaForm" class="consultoria-form">
+                <div class="status-message" id="formStatus"></div>
+                
+                <form id="agendamentoForm" onsubmit="submitAgendamento(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone/WhatsApp *</label>
+                            <input type="tel" id="telefone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa">Empresa/Projeto</label>
+                        <input type="text" id="empresa" class="form-control">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data">Data Preferida *</label>
+                            <input type="date" id="data" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hora">Horário Preferido *</label>
+                            <select id="hora" class="form-control" required>
+                                <option value="">Selecione um horário</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="observacoes">Observações / Dúvidas</label>
+                        <textarea id="observacoes" class="form-control" rows="3" placeholder="Conte-nos mais sobre seu projeto ou dúvidas específicas..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pacoteInteresse">Pacote de Interesse</label>
+                        <select id="pacoteInteresse" class="form-control">
+                            <option value="">Ainda não sei</option>
+                            <option value="S-DIGITAL HOME">S-DIGITAL HOME</option>
+                            <option value="R-STRATEGIC GROWTH">R-STRATEGIC GROWTH</option>
+                            <option value="G-360 TOTAL DOMAIN">G-360 TOTAL DOMAIN</option>
+                            <option value="Personalizado">Personalizado/Sob medida</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span id="submitText">Enviar Pedido de Agendamento</span>
+                        <span id="submitLoading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Enviando...
+                        </span>
+                    </button>
+                    <button type="button" class="submit-btn back-btn" onclick="goBackToOptions()">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main class="container main-content">
+
+        <!-- HERO DOS PACOTES -->
+        <section class="packages-hero">
+            <div class="container">
+                <h1>Pacotes de Marketing Digital</h1>
+                <p>Escolha o plano ideal para impulsionar sua marca nas redes sociais, aumentar o engajamento e gerar mais vendas de forma orgânica.</p>
+                
+                <!-- Navegação entre pacotes -->
+                <div class="package-navigation">
+                    <a href="#s-digital-home" class="package-nav-btn active" data-package="s-digital-home">🟢 S-DIGITAL HOME</a>
+                    <a href="#r-strategic-growth" class="package-nav-btn" data-package="r-strategic-growth">🔵 R-STRATEGIC GROWTH</a>
+                    <a href="#g-360-total-domain" class="package-nav-btn" data-package="g-360-total-domain">🟣 G-360 TOTAL DOMAIN</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTEÚDO DOS PACOTES -->
+        <section class="package-content-section">
+            <div class="container">
+                
+                <!-- PACOTE S-DIGITAL HOME -->
+                <div id="s-digital-home" class="package-content active">
+                    <div class="features-grid">
+                        <!-- Card 1 -->
+                        <div class="feature-card" data-aos="fade-up">
+                            <div class="feature-header">
+                                <div class="feature-icon">1</div>
+                                <h3>Diagnóstico e Posicionamento</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Diagnóstico completo da presença digital atual (Instagram, Facebook, WhatsApp);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Definição de metas básicas por canal (seguidores, engajamento, leads);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Criação de bio otimizada e destaques estratégicos no Instagram;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Suporte na configuração de perfis comerciais no Instagram e Facebook;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Integração com botão do WhatsApp e catálogo de produtos;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Mini painel de controle de resultados no Google Sheets (ex: alcance, contatos, cliques).</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-header">
+                                <div class="feature-icon">2</div>
+                                <h3>Conteúdo e Design Estratégico</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Criação de 4 artes/mês (carrossel, promocional ou institucional);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Produção de 2 vídeos simples (reels ou vídeos explicativos);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>1 animação leve em Motion Design por mês;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Templates editáveis no Canva para promoções e destaques;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Biblioteca visual básica com arquivos organizados em pastas (Google Drive).</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-header">
+                                <div class="feature-icon">3</div>
+                                <h3>Suporte à Estratégia de Vendas Orgânicas</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Ativação da marca em grupos do WhatsApp e Facebook locais;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Gatilhos mentais de urgência aplicados nas artes e campanhas;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Roteiro de venda para WhatsApp com sugestões de frases e chamadas;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Ações promocionais em datas importantes do país;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Tutorial de uso do Meta Business Suite para agendar publicações.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-header">
+                                <div class="feature-icon">4</div>
+                                <h3>Comunicação, Suporte e Alinhamento</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Grupo no WhatsApp com consultor de marketing S.R.G;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Suporte técnico até 6h/dia via WhatsApp e chamadas;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Sessão mensal de alinhamento via WhatsApp Vídeo ou Google Meet (15 a 30 minutos);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Checklist semanal com plano de ação simples para o cliente seguir;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Relatório mensal com avaliação de resultados e recomendações de melhoria.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bonus Section -->
+                    <div class="bonus-section" data-aos="fade-up">
+                        <div class="bonus-header">
+                            <div class="bonus-icon"><i class="fas fa-gift"></i></div>
+                            <h3>BÔNUS – Fornecedores e Ferramentas</h3>
+                        </div>
+                        <div class="bonus-content">
+                            <ul>
+                                <li><i class="fas fa-star"></i> <span>Lista com 5 fornecedores validados conforme o nicho do cliente (moda, cosméticos, eletrônicos, etc.)</span></li>
+                                <li><i class="fas fa-star"></i> <span>Sugestões de 3 ferramentas gratuitas de automação e produtividade (ex: Canva, mLabs, Linktree)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Section -->
+                    <div class="price-section" data-aos="fade-up">
+                        <div class="price-tag">14.999<small>MZN</small></div>
+                        <div class="price-text">por mês • Valor especial para negócios locais</div>
+                        <button class="cta-button" onclick="openWhatsApp('S-DIGITAL HOME', '14.999 MZN/mês')">
+                            <i class="fab fa-whatsapp"></i> Contratar Agora
+                        </button>
+                        <div class="price-note">Pagamento mensal • Sem contrato de fidelização • Cancelamento flexível</div>
+                    </div>
+                </div>
+
+                <!-- PACOTE R-STRATEGIC GROWTH -->
+                <div id="r-strategic-growth" class="package-content">
+                    <div class="features-grid">
+                        <!-- Card 1 -->
+                        <div class="feature-card" data-aos="fade-up">
+                            <div class="feature-header">
+                                <div class="feature-icon">1</div>
+                                <h3>Estratégia Digital Avançada</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Estratégia digital avançada com definição de KPIs;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Funil de conversão simples e mapeamento da jornada do cliente;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Suporte para instalação de Pixel/remarketing;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Campanhas pagas (tráfego pago) com segmentação e A/B testing;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Landing page (página de captura) otimizada para leads;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Relatórios detalhados de desempenho dos anúncios.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-header">
+                                <div class="feature-icon">2</div>
+                                <h3>Conteúdo Multimédia Elaborado</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Conteúdo estratégico multimédia mais elaborado (incl. motion design);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Estratégia omnichannel (WhatsApp, Facebook, Instagram, E-mail);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Ativação em grupos e comunidades;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Roteiros de vendas Instagram + WhatsApp;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>1 influenciador local para campanhas.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-header">
+                                <div class="feature-icon">3</div>
+                                <h3>Recursos e Ferramentas</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Ferramentas e fornecedores recomendados (10 sugestões);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Acesso a plataformas premium de análise;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Dashboard personalizado de métricas;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Consultoria estratégica quinzenal;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Suporte prioritário 12h/dia.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-header">
+                                <div class="feature-icon">4</div>
+                                <h3>Inclui Tudo do S-DIGITAL HOME</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Diagnóstico completo da presença digital;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>4 artes + 2 vídeos + 1 animação/mês;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Suporte consultor (6h/dia);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Templates Canva + biblioteca visual;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>5 fornecedores + relatório mensal.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bonus Section -->
+                    <div class="bonus-section" data-aos="fade-up">
+                        <div class="bonus-header">
+                            <div class="bonus-icon"><i class="fas fa-gift"></i></div>
+                            <h3>BÔNUS EXCLUSIVOS</h3>
+                        </div>
+                        <div class="bonus-content">
+                            <ul>
+                                <li><i class="fas fa-star"></i> <span>Workshop de vendas digitais para sua equipe;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Acesso a banco de imagens premium por 3 meses;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Análise de concorrência detalhada;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Plano de conteúdo trimestral.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Section -->
+                    <div class="price-section" data-aos="fade-up">
+                        <div class="price-tag">24.999<small>MZN</small></div>
+                        <div class="price-text">por mês • Solução completa de crescimento</div>
+                        <button class="cta-button" onclick="openWhatsApp('R-STRATEGIC GROWTH', '24.999 MZN/mês')">
+                            <i class="fab fa-whatsapp"></i> Contratar Agora
+                        </button>
+                        <div class="price-note">Inclui tudo do S-DIGITAL HOME • Gestor de conta dedicado</div>
+                    </div>
+                </div>
+
+                <!-- PACOTE G-360 TOTAL DOMAIN -->
+                <div id="g-360-total-domain" class="package-content">
+                    <div class="features-grid">
+                        <!-- Card 1 -->
+                        <div class="feature-card" data-aos="fade-up">
+                            <div class="feature-header">
+                                <div class="feature-icon">1</div>
+                                <h3>Estratégia Multicanal Avançada</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Diagnóstico avançado com metas detalhadas (ROI, CAC, CTR etc.);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Estratégia multicanal coordenada (Meta, TikTok, LinkedIn, Google);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Calendário editorial trimestral;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Produção até 6 vídeos por mês (reels, storytelling, eventos);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Publicidade + performance com até 10 conjuntos de anúncios.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-header">
+                                <div class="feature-icon">2</div>
+                                <h3>Automação e Performance</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Automação de leads (CRM, WhatsApp, sequências de e-mail);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Painel de desempenho em tempo real (Google Data Studio ou Notion);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Funis automáticos, checkout integrado (M-Pesa, E-mola etc.);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Estratégias de e-commerce e recuperação de clientes;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Ativação em eventos presenciais com materiais criativos.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-header">
+                                <div class="feature-icon">3</div>
+                                <h3>Equipa Dedicada Premium</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Consultoria estratégica quinzenal;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Grupo privado com equipa dedicada (trafficker, designer, consultor);</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Acesso a 22 fornecedores premium + parcerias estratégicas;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Suporte 24/7 para questões urgentes;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Relatórios executivos semanais.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-header">
+                                <div class="feature-icon">4</div>
+                                <h3>Inclui Tudo dos Pacotes Anteriores</h3>
+                            </div>
+                            <div class="feature-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span>Todos os recursos do S-DIGITAL HOME;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Todos os recursos do R-STRATEGIC GROWTH;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Campanhas pagas e landing pages;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Influenciadores locais;</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span>Ferramentas e fornecedores premium.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bonus Section -->
+                    <div class="bonus-section" data-aos="fade-up">
+                        <div class="bonus-header">
+                            <div class="bonus-icon"><i class="fas fa-gift"></i></div>
+                            <h3>BÔNUS PREMIUM</h3>
+                        </div>
+                        <div class="bonus-content">
+                            <ul>
+                                <li><i class="fas fa-star"></i> <span>Auditoria completa de presença digital;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Plano de expansão para 12 meses;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Treinamento para equipe interna;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Acesso vitalício a ferramentas proprietárias;</span></li>
+                                <li><i class="fas fa-star"></i> <span>Consultoria de branding inclusa.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Section -->
+                    <div class="price-section" data-aos="fade-up">
+                        <div class="price-tag">34.999<small>MZN</small></div>
+                        <div class="price-text">por mês • Solução completa de domínio digital</div>
+                        <button class="cta-button" onclick="openWhatsApp('G-360 TOTAL DOMAIN', '34.999 MZN/mês')">
+                            <i class="fab fa-whatsapp"></i> Contratar Agora
+                        </button>
+                        <div class="price-note">Inclui todos os recursos dos pacotes anteriores • Equipa dedicada • Resultados garantidos</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TABELA COMPARATIVA -->
+        <section class="comparison-section">
+            <div class="container">
+                <h2 class="text-center mb-4" style="color: #4a1244 !important; font-size: 2.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Comparação de Pacotes</h2>
+                <p class="text-center mb-5" style="color: #4B5563 !important; max-width: 700px; margin: 0 auto;">
+                    Compare os recursos de cada pacote para fazer a melhor escolha para o seu negócio
+                </p>
+                
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div style="font-weight: 700; font-size: 1.1rem; text-align: left;">Recursos</div>
+                        <div style="color: #0D8C68 !important; font-weight: 700;">S-DIGITAL HOME</div>
+                        <div style="color: #1D4ED8 !important; font-weight: 700;">R-STRATEGIC GROWTH</div>
+                        <div style="color: #7C3AED !important; font-weight: 700;">G-360 TOTAL DOMAIN</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Diagnóstico Digital Completo</div>
+                        <div class="check"><i class="fas fa-check"></i></div>
+                        <div class="check growth"><i class="fas fa-check"></i></div>
+                        <div class="check total"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Artes por Mês</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">4</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">6+</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">8+</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Vídeos por Mês</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">2</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">4</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">6</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Animações Motion Design</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">1</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">2</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">4</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Campanhas Pagas</div>
+                        <div class="cross"><i class="fas fa-times"></i></div>
+                        <div class="check growth"><i class="fas fa-check"></i></div>
+                        <div class="check total"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Landing Page</div>
+                        <div class="cross"><i class="fas fa-times"></i></div>
+                        <div class="check growth"><i class="fas fa-check"></i></div>
+                        <div class="check total"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Estratégia Omnichannel</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Básica</div>
+                        <div class="check growth"><i class="fas fa-check"></i></div>
+                        <div class="check total"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Automação CRM</div>
+                        <div class="cross"><i class="fas fa-times"></i></div>
+                        <div class="cross"><i class="fas fa-times"></i></div>
+                        <div class="check total"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Influenciador Local</div>
+                        <div class="cross"><i class="fas fa-times"></i></div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">1/mês</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">2+/mês</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Fornecedores Recomendados</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">5</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">10</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">22+</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Suporte Consultivo</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Até 6h/dia</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Dedicado</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Equipa Dedicada</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-name">Relatórios de Desempenho</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Simples</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Detalhados</div>
+                        <div style="color: #1F2937 !important; font-weight: 600;">Tempo Real + Dashboard</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="final-cta">
+            <div class="container">
+                <h2 style="color: var(--primary); font-size: 2.2rem; margin-bottom: 20px;">Não sabe qual pacote escolher?</h2>
+                <p style="color: #666; font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px;">
+                    Fale connosco para uma consultoria gratuita. Nossos especialistas irão analisar seu negócio e recomendar o pacote ideal.
+                </p>
+                
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <button onclick="openWhatsApp('Consultoria', 'Gratuita')" class="btn btn-success btn-lg" style="background: #25d366; border: none; padding: 15px 30px; cursor: pointer;">
+                        <i class="fab fa-whatsapp me-2"></i> WhatsApp Rápido
+                    </button>
+                </div>
+                
+                <p class="mt-4" style="color: #666; font-size: 0.9rem;">
+                    <i class="fas fa-check" style="color: var(--home-color);"></i> Consultoria gratuita • 
+                    <i class="fas fa-check" style="color: var(--growth-color);"></i> Sem compromisso • 
+                    <i class="fas fa-check" style="color: var(--total-color);"></i> Análise personalizada
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER DINÂMICO COM REDES E EFEITO NETWORK -->
+    <footer class="dynamic-footer" id="contact">
+        <canvas id="networkCanvas"></canvas>
+        <div class="footer-glow"></div>
+        
+        <div class="container footer-content">
+            <div class="footer-grid">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div class="footer-logo-section">
+                    <img src="assets/custom/images/srg.png" alt="SRG" class="footer-logo">
+                    <p class="footer-description">
+                        SRG Logística e Serviços - Sua ponte entre a China e Moçambique. 
+                        Soluções completas em logística, procurement, marketing digital e tecnologia.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Início</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                        <li><a href="index.html#logistica"><i class="fas fa-chevron-right"></i> Logística</a></li>
+                        <li><a href="index.html#procurement"><i class="fas fa-chevron-right"></i> Procurement</a></li>
+                        <li><a href="index.html#marketing-digital"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+                        <li><a href="index.html#protecao-dados"><i class="fas fa-chevron-right"></i> Segurança de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contacto -->
+                <div>
+                    <h3 class="footer-title">Contacto</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>AV. Moçambique, Zimpeto<br>Palm Square, Shoprite — Maputo</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:+258847965281">+258 84 796 5281</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fab fa-whatsapp"></i>
+                        <p><a href="https://wa.me/258847965281">+258 84 796 5281 (WhatsApp)</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:geral@srg.co.mz">geral@srg.co.mz</a></p>
+                    </div>
+                </div>
+
+                <!-- Coluna 4: Redes Sociais -->
+                <div>
+                    <h3 class="footer-title">Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/258847965281" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/SRG-Agency/61582909114325/" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/srgagency?igsh=MWh0MzAwMzRpY3I4Yw%3D%3D" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@srgagency?_r=1&_t=ZS-941eRaxgQOz" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+      <!-- Footer Bottom -->
+          <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <p class="copyright" style="margin: 0; width: 100%;">
+                <i class="far fa-copyright"></i> 2025 S.R.G. Todos os direitos reservados.
+            </p>
+        </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- SISTEMA DE AUTOMAÇÃO WHATSAPP + EMAIL -->
+    <script>
+        // ============================================
+        // SISTEMA DE AUTOMAÇÃO WHATSAPP + EMAIL
+        // ============================================
+        
+        // Configuração principal - ATUALIZE COM SEUS DADOS
+        const SRG_WHATSAPP_NUMBER = "258847965281";
+        const SRG_EMAIL = "agenciamarketingdep@srg.co.mz";
+        const FORMSUBMIT_TOKEN = "038e3b570649e591fe29c38237847e65"; // SEU TOKEN DO FORMSUBMIT
+        
+        // Variáveis para o sistema de consultoria
+        let selectedOption = null;
+        
+        // Mensagens personalizadas para cada pacote
+        const PACKAGE_MESSAGES = {
+            'S-DIGITAL HOME': `🎯 *INTERESSE NO PACOTE S-DIGITAL HOME* 🎯
+
+Olá SRG!
+
+Tenho interesse no *PACOTE S-DIGITAL HOME* (14.999 MZN/mês) porque:
+
+• Preciso de uma presença digital básica e eficiente
+• Quero começar a vender mais nas redes sociais
+• Necessito de suporte para organizar meu marketing digital
+• Busco resultados orgânicos sem investimento em anúncios
+
+Podemos conversar sobre como este pacote pode ajudar meu negócio?`,
+            
+            'R-STRATEGIC GROWTH': `🚀 *INTERESSE NO PACOTE R-STRATEGIC GROWTH* 🚀
+
+Olá SRG!
+
+Estou interessado(a) no *PACOTE R-STRATEGIC GROWTH* (24.999 MZN/mês) porque:
+
+• Busco crescimento acelerado do meu negócio
+• Quero implementar campanhas pagas eficientes
+• Preciso de estratégia omnichannel avançada
+• Desejo trabalhar com influenciadores locais
+• Necessito de dashboard personalizado e relatórios detalhados
+
+Podemos agendar uma apresentação deste pacote?`,
+            
+            'G-360 TOTAL DOMAIN': `💎 *INTERESSE NO PACOTE G-360 TOTAL DOMAIN* 💎
+
+Olá SRG!
+
+Tenho interesse no *PACOTE G-360 TOTAL DOMAIN* (34.999 MZN/mês) porque:
+
+• Quero dominar completamente meu mercado digital
+• Preciso de uma equipe dedicada e suporte 24/7
+• Busco automação avançada de vendas e leads
+• Desejo expandir para múltiplos canais simultaneamente
+• Necessito de estratégia de e-commerce e checkout integrado
+• Quero acesso a fornecedores premium e parcerias estratégicas
+
+Podemos marcar uma consultoria estratégica para discutir este pacote?`,
+            
+            'Consultoria': `🤝 *SOLICITAÇÃO DE CONSULTORIA GRATUITA* 🤝
+
+Olá SRG!
+
+Gostaria de uma *CONSULTORIA GRATUITA* para:
+
+• Analisar meu negócio atual
+• Receber recomendações personalizadas
+• Entender qual pacote é ideal para minhas necessidades
+• Discutir objetivos e expectativas
+
+Podemos agendar uma conversa para analisar minhas necessidades?`
+        };
+        
+        // ============================================
+        // FUNÇÕES PARA WHATSAPP
+        // ============================================
+        function openWhatsApp(packageName, packagePrice = '') {
+            showModal(packageName);
+            
+            let message = PACKAGE_MESSAGES[packageName] || 
+                `Olá SRG!\n\nTenho interesse no pacote *${packageName}*${packagePrice ? ` (${packagePrice})` : ''}.\n\nPodemos conversar sobre como este pacote pode ajudar meu negócio?`;
+            
+            if (packagePrice && packagePrice !== 'Gratuita') {
+                message = message.replace(/\d+\.?\d*\s*MZN\/mês/, packagePrice);
+            }
+            
+            const encodedMessage = encodeURIComponent(message);
+            const cleanNumber = SRG_WHATSAPP_NUMBER.replace(/\D/g, '');
+            const whatsappURL = `https://wa.me/${cleanNumber}?text=${encodedMessage}`;
+            
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+                setTimeout(closeModal, 2000);
+                trackConversion(packageName, packagePrice, 'whatsapp');
+            }, 1500);
+        }
+        
+        function showModal(packageName) {
+            const modal = document.getElementById('whatsappModal');
+            const modalMessage = document.getElementById('modalMessage');
+            if (modal && modalMessage) {
+                modalMessage.textContent = `Preparando mensagem para: ${packageName}...`;
+                modal.style.display = 'flex';
+            }
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('whatsappModal');
+            if (modal) modal.style.display = 'none';
+        }
+        
+        // ============================================
+        // FUNÇÕES PARA CONSULTORIA (MODAL DUPLO)
+        // ============================================
+        function openConsultoriaModal() {
+            const modal = document.getElementById('consultoriaModal');
+            if (modal) {
+                resetConsultoriaForm();
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function closeConsultoriaModal() {
+            const modal = document.getElementById('consultoriaModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        function selectOption(option) {
+            selectedOption = option;
+            
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            const selectedCard = document.querySelector(`.${option}-option`);
+            if (selectedCard) {
+                selectedCard.classList.add('selected');
+            }
+            
+            const confirmBtn = document.getElementById('confirmBtn');
+            if (confirmBtn) {
+                confirmBtn.style.display = 'block';
+            }
+        }
+        
+        function confirmOption() {
+            if (!selectedOption) return;
+            
+            if (selectedOption === 'whatsapp') {
+                closeConsultoriaModal();
+                openWhatsApp('Consultoria', 'Gratuita');
+            } else if (selectedOption === 'email') {
+                showConsultoriaForm();
+            }
+        }
+        
+        function showConsultoriaForm() {
+            const optionsDiv = document.getElementById('consultoriaOptions');
+            const formDiv = document.getElementById('consultoriaForm');
+            const confirmBtn = document.getElementById('confirmBtn');
+            
+            if (optionsDiv) optionsDiv.style.display = 'none';
+            if (formDiv) {
+                formDiv.classList.add('active');
+                formDiv.style.display = 'block';
+            }
+            if (confirmBtn) confirmBtn.style.display = 'none';
+            
+            const dataInput = document.getElementById('data');
+            if (dataInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dataInput.min = today;
+            }
+        }
+        
+        function goBackToOptions() {
+            const optionsDiv = document.getElementById('consultoriaOptions');
+            const formDiv = document.getElementById('consultoriaForm');
+            const confirmBtn = document.getElementById('confirmBtn');
+            
+            if (optionsDiv) optionsDiv.style.display = 'flex';
+            if (formDiv) {
+                formDiv.classList.remove('active');
+                formDiv.style.display = 'none';
+            }
+            if (confirmBtn) confirmBtn.style.display = 'block';
+            
+            const statusDiv = document.getElementById('formStatus');
+            if (statusDiv) statusDiv.style.display = 'none';
+        }
+        
+        function resetConsultoriaForm() {
+            selectedOption = null;
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            const form = document.getElementById('agendamentoForm');
+            if (form) form.reset();
+            
+            const optionsDiv = document.getElementById('consultoriaOptions');
+            const formDiv = document.getElementById('consultoriaForm');
+            const confirmBtn = document.getElementById('confirmBtn');
+            
+            if (optionsDiv) optionsDiv.style.display = 'flex';
+            if (formDiv) {
+                formDiv.classList.remove('active');
+                formDiv.style.display = 'none';
+            }
+            if (confirmBtn) confirmBtn.style.display = 'none';
+        }
+        
+        // ============================================
+        // ENVIO DE FORMULÁRIO DE AGENDAMENTO VIA EMAIL
+        // ============================================
+        async function submitAgendamento(event) {
+            event.preventDefault();
+            
+            const formData = {
+                nome: document.getElementById('nome').value,
+                telefone: document.getElementById('telefone').value,
+                email: document.getElementById('email').value,
+                empresa: document.getElementById('empresa').value || 'Não informado',
+                data: document.getElementById('data').value,
+                hora: document.getElementById('hora').value,
+                observacoes: document.getElementById('observacoes').value || 'Nenhuma observação',
+                pacoteInteresse: document.getElementById('pacoteInteresse').value || 'Ainda não definido'
+            };
+            
+            if (!formData.nome || !formData.telefone || !formData.email || !formData.data || !formData.hora) {
+                showFormStatus('Por favor, preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            showFormStatus('Enviando seu agendamento...', 'loading');
+            toggleSubmitButton(true);
+            
+            try {
+                const success = await sendEmail(formData);
+                
+                if (success) {
+                    showFormStatus('✅ Agendamento enviado com sucesso! Em breve entraremos em contato para confirmar.', 'success');
+                    
+                    trackConversion('Agendamento Consultoria', 'Gratuita', 'email', formData);
+                    
+                    setTimeout(() => {
+                        closeConsultoriaModal();
+                        toggleSubmitButton(false);
+                    }, 3000);
+                } else {
+                    showFormStatus('⚠️ Não foi possível enviar o agendamento. Tente novamente ou use o WhatsApp.', 'error');
+                    toggleSubmitButton(false);
+                }
+            } catch (error) {
+                console.error('Erro ao enviar agendamento:', error);
+                showFormStatus('❌ Erro ao enviar. Por favor, use o WhatsApp ou tente novamente.', 'error');
+                toggleSubmitButton(false);
+            }
+        }
+        
+        async function sendEmail(formData) {
+            // ENDPOINT ATUALIZADO COM O TOKEN DO FORMSUBMIT
+            const formSubmitEndpoint = `https://formsubmit.co/ajax/${FORMSUBMIT_TOKEN}`;
+            
+            console.log('📤 Enviando para FormSubmit:', formSubmitEndpoint);
+            
+            try {
+                const response = await fetch(formSubmitEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: formData.nome,
+                        phone: formData.telefone,
+                        email: formData.email,
+                        company: formData.empresa,
+                        date: formData.data,
+                        time: formData.hora,
+                        package: formData.pacoteInteresse,
+                        message: formData.observacoes,
+                        subject: `📅 Agendamento Consultoria - ${formData.nome}`,
+                        _template: 'table',
+                        _captcha: 'false',
+                        _subject: `📅 Agendamento Consultoria - ${formData.nome}`,
+                        _replyto: formData.email,
+                        _honey: '' // Anti-spam
+                    })
+                });
+                
+                console.log('📥 Resposta do FormSubmit:', response);
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('✅ Resultado do FormSubmit:', result);
+                    return true;
+                } else {
+                    console.error('❌ Erro na resposta do FormSubmit:', response.status);
+                    return sendEmailViaMailto(formData); // Fallback
+                }
+                
+            } catch (error) {
+                console.error('❌ Erro ao conectar com FormSubmit:', error);
+                return sendEmailViaMailto(formData);
+            }
+        }
+        
+        function sendEmailViaMailto(formData) {
+            const subject = `📅 Agendamento Consultoria - ${formData.nome}`;
+            const body = `
+Nome: ${formData.nome}
+Telefone: ${formData.telefone}
+Email: ${formData.email}
+Empresa: ${formData.empresa}
+
+Data Preferida: ${formData.data}
+Horário Preferido: ${formData.hora}
+
+Pacote de Interesse: ${formData.pacoteInteresse}
+
+Observações:
+${formData.observacoes}
+
+---
+Enviado através do site SRG Marketing
+            `;
+            
+            const mailtoLink = `mailto:${SRG_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(mailtoLink, '_blank');
+            return true;
+        }
+        
+        function showFormStatus(message, type) {
+            const statusDiv = document.getElementById('formStatus');
+            if (statusDiv) {
+                statusDiv.textContent = message;
+                statusDiv.className = `status-message status-${type}`;
+                statusDiv.style.display = 'block';
+                statusDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        
+        function toggleSubmitButton(loading) {
+            const submitText = document.getElementById('submitText');
+            const submitLoading = document.getElementById('submitLoading');
+            
+            if (submitText && submitLoading) {
+                if (loading) {
+                    submitText.style.display = 'none';
+                    submitLoading.style.display = 'inline';
+                } else {
+                    submitText.style.display = 'inline';
+                    submitLoading.style.display = 'none';
+                }
+            }
+        }
+        
+        // ============================================
+        // FUNÇÕES DE TRACKING
+        // ============================================
+        function trackConversion(packageName, packagePrice, method, extraData = null) {
+            const conversionData = {
+                package: packageName,
+                price: packagePrice,
+                method: method,
+                timestamp: new Date().toISOString(),
+                page: window.location.href,
+                ...(extraData && { formData: extraData })
+            };
+            
+            console.log('📊 Conversão registrada:', conversionData);
+            
+            try {
+                const conversions = JSON.parse(localStorage.getItem('srgConversions') || '[]');
+                conversions.push(conversionData);
+                localStorage.setItem('srgConversions', JSON.stringify(conversions));
+            } catch (e) {
+                console.log('⚠️ Não foi possível salvar no localStorage');
+            }
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'event_category': 'marketing',
+                    'event_label': `${packageName}_${method}`,
+                    'value': extractPriceValue(packagePrice)
+                });
+            }
+            
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: packageName,
+                    content_category: `SRG_${method}`,
+                    value: extractPriceValue(packagePrice)
+                });
+            }
+        }
+        
+        function extractPriceValue(priceString) {
+            if (!priceString || priceString === 'Gratuita') return 0;
+            const match = priceString.match(/(\d+[\.,]?\d*)/);
+            return match ? parseFloat(match[1].replace(',', '.')) : 0;
+        }
+        
+        // ============================================
+        // INICIALIZAÇÃO DA PÁGINA
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+            
+            const packageNavBtns = document.querySelectorAll('.package-nav-btn');
+            const packageContents = document.querySelectorAll('.package-content');
+            
+            packageNavBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    packageNavBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const targetPackage = this.getAttribute('data-package');
+                    packageContents.forEach(content => content.classList.remove('active'));
+                    
+                    const targetContent = document.getElementById(targetPackage);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        window.scrollTo({
+                            top: targetContent.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        history.pushState(null, null, '#' + targetPackage);
+                    }
+                });
+            });
+            
+            const pacoteHash = window.location.hash.substring(1);
+            if (['s-digital-home', 'r-strategic-growth', 'g-360-total-domain'].includes(pacoteHash)) {
+                const targetBtn = document.querySelector(`.package-nav-btn[data-package="${pacoteHash}"]`);
+                if (targetBtn) setTimeout(() => targetBtn.click(), 300);
+            }
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('menu');
+            
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function() {
+                    menu.classList.toggle('show');
+                    menuToggle.setAttribute('aria-expanded', menu.classList.contains('show'));
+                });
+                
+                document.querySelectorAll('#menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('show');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+            
+            const dataInput = document.getElementById('data');
+            if (dataInput) {
+                const today = new Date();
+                const dd = String(today.getDate()).padStart(2, '0');
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const yyyy = today.getFullYear();
+                dataInput.min = `${yyyy}-${mm}-${dd}`;
+                
+                // Definir data padrão para amanhã
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                const tomorrowStr = tomorrow.toISOString().split('T')[0];
+                dataInput.value = tomorrowStr;
+            }
+            
+            window.addEventListener('click', function(event) {
+                const whatsappModal = document.getElementById('whatsappModal');
+                const consultoriaModal = document.getElementById('consultoriaModal');
+                
+                if (event.target === whatsappModal) closeModal();
+                if (event.target === consultoriaModal) closeConsultoriaModal();
+            });
+            
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    closeModal();
+                    closeConsultoriaModal();
+                }
+            });
+            
+            // Canvas do efeito de rede no footer
+            const canvas = document.getElementById('networkCanvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let width, height;
+                let particles = [];
+                const particleCount = 40;
+
+                function init() {
+                    width = window.innerWidth;
+                    height = document.querySelector('.dynamic-footer').offsetHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+
+                    for (let i = 0; i < particleCount; i++) {
+                        particles.push({
+                            x: Math.random() * width,
+                            y: Math.random() * height,
+                            vx: (Math.random() - 0.5) * 0.3,
+                            vy: (Math.random() - 0.5) * 0.3,
+                            radius: Math.random() * 4 + 3
+                        });
+                    }
+                }
+
+                function draw() {
+                    ctx.clearRect(0, 0, width, height);
+                    
+                    ctx.strokeStyle = '#FFD400';
+                    ctx.lineWidth = 0.8;
+                    ctx.globalAlpha = 0.25;
+
+                    for (let i = 0; i < particles.length; i++) {
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+
+                            if (distance < 150) {
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+
+                    particles.forEach(p => {
+                        ctx.shadowColor = '#FFD400';
+                        ctx.shadowBlur = 15;
+                        
+                        ctx.fillStyle = '#FFD400';
+                        ctx.globalAlpha = 0.8;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fill();
+                        
+                        ctx.shadowBlur = 20;
+                        ctx.fillStyle = '#FFFFFF';
+                        ctx.globalAlpha = 0.6;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius * 0.5, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+
+                    ctx.shadowBlur = 0;
+
+                    particles.forEach(p => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+                    });
+
+                    requestAnimationFrame(draw);
+                }
+
+                init();
+                draw();
+
+                window.addEventListener('resize', () => {
+                    width = window.innerWidth;
+                    height = document.querySelector('.dynamic-footer').offsetHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+                });
+            }
+            
+            console.log('✅ Sistema SRG Marketing carregado com sucesso!');
+            console.log(`📧 Email de marketing: ${SRG_EMAIL}`);
+            console.log(`📞 WhatsApp: ${SRG_WHATSAPP_NUMBER}`);
+            console.log(`🔑 FormSubmit Token: ${FORMSUBMIT_TOKEN}`);
+            console.log('🚀 Pronto para receber agendamentos!');
+        });
+        
+        // Exportar funções globais
+        window.openWhatsApp = openWhatsApp;
+        window.openConsultoriaModal = openConsultoriaModal;
+        window.closeConsultoriaModal = closeConsultoriaModal;
+        
+        console.log('🚀 Sistema de agendamento carregado com sucesso!');
+    </script>
+</body>
+</html>

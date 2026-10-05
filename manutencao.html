@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pacotes de Manutenção Tecnológica - SRG | Soluções de Proteção de Dados e Manutenção de Equipamentos">
+  <meta name="keywords" content="manutenção informática maputo, proteção de dados moçambique, manutenção computadores, segurança informática, srg tecnologia">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pacotes de Manutenção Tecnológica - SRG | Proteção e Manutenção de Equipamentos">
+  <meta property="og:description" content="Escolha entre nossos pacotes de manutenção: S MINI, R MEDIUM, G MAX ou SRG SUPER MAX">
+  <meta property="og:image" content="https://srg.co.mz/assets/custom/images/srg.png">
+  
+  <title>Pacotes de Manutenção Tecnológica - SRG</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/custom/images/srg.png" type="image/png">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- CSS Específico para esta página -->
+  <style>
+    :root {
+      --primary: #2563eb;     /* Azul principal */
+      --secondary: #3b82f6;   /* Azul secundário */
+      --light: #eff6ff;       /* Azul claro para fundos */
+      --dark: #1e40af;        /* Azul escuro */
+      --gray: #e5e7eb;        /* Cinza azulado */
+      --mini-color: #3b82f6;      /* Azul claro */
+      --medium-color: #2563eb;    /* Azul médio */
+      --max-color: #1d4ed8;       /* Azul escuro */
+      --supermax-color: #1e40af;  /* Azul muito escuro */
+      --srg-yellow: #FFD400;
+      --whatsapp-green: #25d366;
+      --whatsapp-dark: #128C7E;
+    }
+    
+    /* Estilos específicos para os pacotes de manutenção */
+    .packages-hero {
+      padding: 100px 0 60px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+      text-align: center;
+    }
+    
+    .packages-hero h1 {
+      color: var(--primary);
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    
+    .packages-hero p {
+      color: #4b5563;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    .package-navigation {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 40px 0 30px;
+      flex-wrap: wrap;
+    }
+    
+    .package-nav-btn {
+      padding: 12px 25px;
+      border: 2px solid var(--secondary);
+      background: white;
+      color: var(--primary);
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      text-align: center;
+    }
+    
+    .package-nav-btn:hover {
+      background: var(--secondary);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    .package-nav-btn.active {
+      background: var(--secondary);
+      color: white;
+    }
+    
+    /* Cores específicas para cada botão */
+    .package-nav-btn[data-package="s-mini"] {
+      border-color: var(--mini-color);
+      color: var(--mini-color);
+    }
+    
+    .package-nav-btn[data-package="s-mini"]:hover,
+    .package-nav-btn[data-package="s-mini"].active {
+      background: var(--mini-color);
+      color: white;
+    }
+    
+    .package-nav-btn[data-package="r-medium"] {
+      border-color: var(--medium-color);
+      color: var(--medium-color);
+    }
+    
+    .package-nav-btn[data-package="r-medium"]:hover,
+    .package-nav-btn[data-package="r-medium"].active {
+      background: var(--medium-color);
+      color: white;
+    }
+    
+    .package-nav-btn[data-package="g-max"] {
+      border-color: var(--max-color);
+      color: var(--max-color);
+    }
+    
+    .package-nav-btn[data-package="g-max"]:hover,
+    .package-nav-btn[data-package="g-max"].active {
+      background: var(--max-color);
+      color: white;
+    }
+    
+    .package-nav-btn[data-package="srg-super-max"] {
+      border-color: var(--supermax-color);
+      color: var(--supermax-color);
+    }
+    
+    .package-nav-btn[data-package="srg-super-max"]:hover,
+    .package-nav-btn[data-package="srg-super-max"].active {
+      background: var(--supermax-color);
+      color: white;
+    }
+    
+    /* Design dos pacotes */
+    .package-content-section {
+      padding: 40px 0;
+    }
+    
+    .package-content {
+      display: none;
+    }
+    
+    .package-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .feature-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid var(--secondary);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .feature-header {
+      background: linear-gradient(to right, var(--primary), var(--dark));
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .feature-icon {
+      background-color: white;
+      color: var(--primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    .feature-header h3 {
+      font-size: 20px;
+      margin: 0;
+    }
+    
+    .feature-content {
+      padding: 25px;
+    }
+    
+    .feature-content ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .feature-content li {
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--gray);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .feature-content li:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-content li i {
+      color: var(--secondary);
+      margin-top: 5px;
+      min-width: 20px;
+    }
+    
+    .feature-content span {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+    
+    /* Bonus Section */
+    .bonus-section {
+      background: linear-gradient(to right, var(--primary), var(--dark));
+      color: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    }
+    
+    .bonus-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .bonus-icon {
+      background-color: white;
+      color: var(--primary);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .bonus-section h3 {
+      font-size: 26px;
+      color: white;
+      margin: 0;
+    }
+    
+    .bonus-content ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    .bonus-content li {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .bonus-content li:last-child {
+      border-bottom: none;
+    }
+    
+    .bonus-content i {
+      color: white;
+      background: rgba(255,255,255,0.2);
+      padding: 5px;
+      border-radius: 50%;
+      margin-top: 5px;
+    }
+    
+    /* Price Section */
+    .price-section {
+      text-align: center;
+      padding: 40px 0;
+      background-color: white;
+      border-radius: 10px;
+      margin: 40px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 2px solid var(--secondary);
+    }
+    
+    .price-tag {
+      font-size: 70px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 5px;
+    }
+    
+    .price-tag small {
+      font-size: 28px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+    
+    .price-text {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary), var(--dark));
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+      color: white;
+    }
+    
+    .price-note {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #888;
+      font-style: italic;
+    }
+    
+    /* Tabela Comparativa - ALINHAMENTO PERFEITO */
+    .comparison-section {
+      padding: 60px 0;
+      background: var(--light);
+    }
+    
+    .comparison-table {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .comparison-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      background: linear-gradient(to right, var(--primary), var(--dark));
+      color: white;
+      font-weight: 700;
+      padding: 25px 20px;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .comparison-header div:first-child {
+      text-align: left;
+      padding-left: 20px;
+    }
+    
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      padding: 20px;
+      align-items: center;
+      border-bottom: 2px solid var(--gray);
+      text-align: center;
+      min-height: 70px;
+    }
+    
+    .comparison-row:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    
+    .comparison-row:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-name {
+      font-weight: 600;
+      color: #1f2937;
+      text-align: left;
+      padding-left: 20px;
+    }
+    
+    /* Alinhamento perfeito para check marks e conteúdo */
+    .comparison-row > div:not(:first-child) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 10px;
+    }
+    
+    .check {
+      color: #059669; /* Verde para check */
+      font-size: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .check i {
+      display: inline-block;
+    }
+    
+    .cross {
+      color: #ef4444; /* Vermelho para X */
+      font-size: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .cross i {
+      display: inline-block;
+    }
+    
+    /* Texto nas células alinhado ao centro */
+    .comparison-row div:not(.feature-name):not(.check):not(.cross) {
+      color: #1f2937;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      line-height: 1.4;
+    }
+    
+    /* CTA Final */
+    .final-cta {
+      text-align: center;
+      padding: 60px 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    }
+    
+    /* WhatsApp Flutuante */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--whatsapp-green);
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+      z-index: 99;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #20b859;
+    }
+    
+    /* Header fixo */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,212,0,0.2);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .brand img { 
+      height: 50px; 
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      margin: 0;
+      align-items: center;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+    
+    nav a:hover { 
+      color: var(--srg-yellow); 
+    }
+    
+    nav a.cta {
+      background: var(--srg-yellow);
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      color: black;
+      font-weight: 700;
+    }
+    
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+    
+    body {
+      padding-top: 90px;
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 1200px) {
+      .comparison-header, .comparison-row {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        font-size: 14px;
+        padding: 15px;
+      }
+      
+      .price-tag {
+        font-size: 60px;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .comparison-header, .comparison-row {
+        grid-template-columns: 1.5fr 0.9fr 0.9fr 0.9fr 0.9fr;
+        font-size: 13px;
+        padding: 12px;
+      }
+      
+      .feature-name {
+        padding-left: 10px;
+        font-size: 13px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .packages-hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .price-tag {
+        font-size: 50px;
+      }
+      
+      .price-tag small {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      
+      .feature-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .comparison-header, .comparison-row {
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 0.8fr;
+        font-size: 11px;
+        padding: 10px;
+      }
+      
+      .comparison-header div:first-child,
+      .feature-name {
+        padding-left: 5px;
+        font-size: 11px;
+      }
+      
+      .check, .cross {
+        font-size: 16px;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        z-index: 1000;
+      }
+      
+      nav ul.show {
+        display: flex;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .package-navigation {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .package-nav-btn {
+        width: 90%;
+        max-width: 300px;
+      }
+      
+      .comparison-header, .comparison-row {
+        grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr 0.7fr;
+        font-size: 10px;
+      }
+      
+      .feature-content li {
+        font-size: 14px;
+      }
+    }
+    
+    /* Melhorias para legibilidade */
+    .feature-content li:hover {
+      background-color: #f8fafc;
+      border-radius: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    /* Destaque para pacote ativo */
+    .package-content.active .price-section {
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+    }
+    
+    /* Animação suave para transições */
+    .package-content {
+      transition: opacity 0.3s ease;
+    }
+    
+    /* Footer Dinâmico com Efeito Network */
+    .dynamic-footer {
+      position: relative;
+      background: #030303;
+      color: #fff;
+      padding: 80px 0 30px;
+      margin-top: 80px;
+      overflow: hidden;
+      border-top: 3px solid var(--srg-yellow);
+    }
+
+    #networkCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(255, 212, 0, 0.15) 0%, transparent 60%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-logo-section {
+      margin-bottom: 20px;
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px rgba(255, 212, 0, 0.5));
+    }
+
+    .footer-description {
+      color: #aaa;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .footer-title {
+      color: var(--srg-yellow);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--srg-yellow);
+      box-shadow: 0 0 15px var(--srg-yellow);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a i {
+      color: var(--srg-yellow);
+      font-size: 0.8rem;
+      transition: transform 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--srg-yellow);
+      transform: translateX(5px);
+    }
+
+    .footer-links a:hover i {
+      transform: translateX(3px);
+    }
+
+    .contact-info {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      color: #ccc;
+    }
+
+    .contact-info i {
+      color: var(--srg-yellow);
+      font-size: 1.2rem;
+      min-width: 25px;
+      margin-top: 3px;
+    }
+
+    .contact-info p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: var(--srg-yellow);
+    }
+
+    /* Redes Sociais com efeitos */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s;
+      position: relative;
+      border: 1px solid rgba(255, 212, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .social-link::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 212, 0, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.3s, height 0.3s;
+      z-index: -1;
+    }
+
+    .social-link:hover {
+      color: black;
+      border-color: var(--srg-yellow);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(255, 212, 0, 0.4);
+    }
+
+    .social-link:hover::before {
+      width: 100%;
+      height: 100%;
+      background: var(--srg-yellow);
+    }
+
+    .social-link:hover i {
+      color: black;
+      transform: scale(1.1);
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+      position: relative;
+      z-index: 2;
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 212, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .copyright {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-badges {
+      display: flex;
+      gap: 20px;
+    }
+
+    .badge-item {
+      color: #666;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s;
+    }
+
+    .badge-item:hover {
+      color: var(--srg-yellow);
+    }
+
+    .badge-item i {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER FIXO (igual às outras páginas) -->
+  <header class="fixed-header">
+    <div class="container nav-container">
+      <div class="brand">
+        <a href="index.html"><img src="assets/custom/images/srg.png" alt="SRG" height="44" loading="lazy"></a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#services">Serviços</a></li>
+          <li><a href="index.html#logistica">Logística</a></li>
+          <li><a href="index.html#procurement">Procurement</a></li>
+          <li><a href="pacotes-marketing.html">Agência de Marketing</a></li>
+          <li><a href="manutencao.html">Tecnologia e Sistemas</a></li>
+          <li><a class="cta" href="#contact">Contacte-nos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/258847965281?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20pacotes%20de%20manutenção" 
+     class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <main class="container main-content">
+
+    <!-- HERO DOS PACOTES -->
+    <section class="packages-hero">
+      <div class="container">
+        <h1>Pacotes de Manutenção Tecnológica</h1>
+        <p>Proteja seus dados, otimize seus equipamentos e garanta a segurança da sua infraestrutura tecnológica com nossos pacotes especializados.</p>
+        
+        <!-- Navegação entre pacotes -->
+        <div class="package-navigation">
+          <a href="#s-mini" class="package-nav-btn active" data-package="s-mini">🟦 S MINI</a>
+          <a href="#r-medium" class="package-nav-btn" data-package="r-medium">🔵 R MEDIUM</a>
+          <a href="#g-max" class="package-nav-btn" data-package="g-max">🔷 G MAX</a>
+          <a href="#srg-super-max" class="package-nav-btn" data-package="srg-super-max">💠 SRG SUPER MAX</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO DOS PACOTES -->
+    <section class="package-content-section">
+      <div class="container">
+        
+        <!-- PACOTE S MINI -->
+        <div id="s-mini" class="package-content active">
+          <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-header">
+                <div class="feature-icon">1</div>
+                <h3>Diagnóstico e Proteção Básica</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Diagnóstico gratuito de hardware e software na primeira visita</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Bloqueio de acessos a sites e conteúdos não autorizados</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Proteção antivírus premiada, com defesa contra malware e ransomware</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Prevenção e detecção de fraudes online (scam) e tentativas de phishing</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Proteção inovadora de e-mails e bloqueio de anúncios e rastreadores</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Manutenção preventiva básica (limpeza física e atualização de sistemas)</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-header">
+                <div class="feature-icon">2</div>
+                <h3>Identificação e Monitoramento</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Aplicação de selos SRG em componentes internos (proteção contra manipulação)</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Relatórios completos de produtividade e utilização da internet</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Monitoramento básico de uso dos computadores</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Suporte técnico remoto via WhatsApp</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Atualização mensal de sistemas e software</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Otimização de performance de computadores</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Price Section -->
+          <div class="price-section" data-aos="fade-up">
+            <div class="price-tag">7.500<small>MZN</small></div>
+            <div class="price-text">por mês • Ideal para pequenas empresas e profissionais</div>
+            <a href="https://wa.me/258847965281?text=Olá!%20Quero%20contratar%20o%20PACOTE%20S%20MINI" 
+               class="cta-button" target="_blank">
+              <i class="fab fa-whatsapp"></i> Contratar Agora
+            </a>
+            <div class="price-note">Pagamento mensal • Sem contrato de fidelização • Suporte básico incluído</div>
+          </div>
+        </div>
+
+        <!-- PACOTE R MEDIUM -->
+        <div id="r-medium" class="package-content">
+          <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-header">
+                <div class="feature-icon">1</div>
+                <h3>Proteção Multiplataforma</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Inclui todos os recursos do S MINI</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Proteção antivírus multiplataforma (Windows®, macOS®, Android™, iOS®)</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Proteção contra mineração de criptomoedas (cryptomining)</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Gestor de palavras-passe (Password Manager) para até 5 utilizadores</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>VPN ilimitada com acesso a mais de 4000 servidores em 50+ países</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Manutenção corretiva de equipamentos e substituição de dispositivos avariados</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-header">
+                <div class="feature-icon">2</div>
+                <h3>Suporte Avançado</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Técnicos disponíveis 12h por dia, 7 dias por semana</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Suporte remoto urgente para problemas críticos</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Monitoria simples do uso dos computadores (sites visitados, tempo de utilização)</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Backup básico de arquivos importantes</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Consultoria técnica mensal</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Relatórios detalhados de segurança e performance</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bonus Section -->
+          <div class="bonus-section" data-aos="fade-up">
+            <div class="bonus-header">
+              <div class="bonus-icon"><i class="fas fa-gift"></i></div>
+              <h3>BÔNUS – Suporte Prioritário</h3>
+            </div>
+            <div class="bonus-content">
+              <ul>
+                <li><i class="fas fa-star"></i> <span>Resposta prioritária em até 30 minutos para problemas críticos</span></li>
+                <li><i class="fas fa-star"></i> <span>Visita técnica mensal preventiva</span></li>
+                <li><i class="fas fa-star"></i> <span>Acesso a ferramentas de otimização premium</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Price Section -->
+          <div class="price-section" data-aos="fade-up">
+            <div class="price-tag">15.500<small>MZN</small></div>
+            <div class="price-text">por mês • Solução completa para empresas em crescimento</div>
+            <a href="https://wa.me/258847965281?text=Olá!%20Quero%20contratar%20o%20PACOTE%20R%20MEDIUM" 
+               class="cta-button" target="_blank">
+              <i class="fab fa-whatsapp"></i> Contratar Agora
+            </a>
+            <div class="price-note">Inclui todos os recursos do S MINI • Suporte estendido 12h/dia • Popular</div>
+          </div>
+        </div>
+
+        <!-- PACOTE G MAX -->
+        <div id="g-max" class="package-content">
+          <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-header">
+                <div class="feature-icon">1</div>
+                <h3>Segurança Avançada</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Inclui todos os recursos do R MEDIUM</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Proteção antivírus multipremiada com detecção em tempo real</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Proteção de identidade digital com detecção de fugas de dados</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Visualização da pegada digital e notificações automáticas</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>VPN e gestor de palavras-passe integrados</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Substituição de dispositivos avariados</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-header">
+                <div class="feature-icon">2</div>
+                <h3>Controle Total</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Bloqueio de portas USB e de dispositivos não reconhecidos</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Instalação de rastreadores de segurança em equipamentos</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Monitoria avançada em tempo real com alertas e relatórios detalhados</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Definição de perfis de acesso diferenciados por departamento ou utilizador</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Gestão centralizada de permissões e políticas digitais</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Relatórios executivos de segurança e conformidade</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Price Section -->
+          <div class="price-section" data-aos="fade-up">
+            <div class="price-tag">25.500<small>MZN</small></div>
+            <div class="price-text">por mês • Solução empresarial completa</div>
+            <a href="https://wa.me/258847965281?text=Olá!%20Quero%20contratar%20o%20PACOTE%20G%20MAX" 
+               class="cta-button" target="_blank">
+              <i class="fab fa-whatsapp"></i> Contratar Agora
+            </a>
+            <div class="price-note">Inclui todos os recursos do R MEDIUM • Controle total • Segurança avançada</div>
+          </div>
+        </div>
+
+        <!-- PACOTE SRG SUPER MAX -->
+        <div id="srg-super-max" class="package-content">
+          <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-header">
+                <div class="feature-icon">1</div>
+                <h3>Solução Empresarial Premium</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Inclui todos os recursos dos pacotes anteriores</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Cópias de segurança (backups) automáticas em nuvem e locais</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Gestão de versões de ficheiros com possibilidade de restaurar versões antigas</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Planeamento tecnológico de médio e longo prazo</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Gestão de licenças e softwares para evitar riscos legais</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Avaliação de custos e otimização de recursos de TI</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-header">
+                <div class="feature-icon">2</div>
+                <h3>Consultoria e Formação</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Apoio técnico em projectos de expansão da empresa</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Formação prática em boas práticas digitais e segurança online</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Workshops sobre uso produtivo e seguro da internet</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Suporte educativo contínuo durante 3 meses após implementação</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Campanhas internas de sensibilização e promoção de cultura digital</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Controlo parental digital para funcionários (opcional)</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-header">
+                <div class="feature-icon">3</div>
+                <h3>Suporte 24/7 Premium</h3>
+              </div>
+              <div class="feature-content">
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> <span>Técnicos disponíveis 24h por dia, 7 dias por semana</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Suporte remoto urgente com tempo de resposta de 15 minutos</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Gestor de conta dedicado</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Reuniões trimestrais de revisão estratégica</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Relatórios executivos personalizados</span></li>
+                  <li><i class="fas fa-check-circle"></i> <span>Acesso direto à equipe de especialistas SRG</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Price Section -->
+          <div class="price-section" data-aos="fade-up">
+            <div class="price-tag">50.500<small>MZN</small></div>
+            <div class="price-text">por mês • Solução empresarial premium completa</div>
+            <a href="https://wa.me/258847965281?text=Olá!%20Quero%20contratar%20o%20PACOTE%20SRG%20SUPER%20MAX" 
+               class="cta-button" target="_blank">
+              <i class="fab fa-whatsapp"></i> Contratar Agora
+            </a>
+            <div class="price-note">Inclui todos os recursos • Suporte 24/7 • Consultoria estratégica • Solução completa</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TABELA COMPARATIVA COM ALINHAMENTO PERFEITO -->
+    <section class="comparison-section">
+      <div class="container">
+        <h2 class="text-center mb-4" style="color: #1e40af !important; font-size: 2.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Comparação de Pacotes</h2>
+        <p class="text-center mb-5" style="color: #4B5563 !important; max-width: 700px; margin: 0 auto;">
+          Compare os recursos de cada pacote para escolher a melhor solução para sua empresa
+        </p>
+        
+        <div class="comparison-table">
+          <div class="comparison-header">
+            <div style="font-weight: 700; font-size: 1.1rem; text-align: left;">Recursos</div>
+            <div style="color: #ffffff !important; font-weight: 700;">S MINI</div>
+            <div style="color: #ffffff !important; font-weight: 700;">R MEDIUM</div>
+            <div style="color: #ffffff !important; font-weight: 700;">G MAX</div>
+            <div style="color: #ffffff !important; font-weight: 700;">SRG SUPER MAX</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Diagnóstico Completo</div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Proteção Antivírus</div>
+            <div>Básica</div>
+            <div>Multiplataforma</div>
+            <div>Avançada + Tempo Real</div>
+            <div>Premium Total</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">VPN Ilimitada</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Gestor de Senhas</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div>Até 5 usuários</div>
+            <div>Ilimitado</div>
+            <div>Ilimitado + Integrado</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Backup Automático</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div>Básico</div>
+            <div>Completo</div>
+            <div>Cloud + Local + Versões</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Suporte Técnico</div>
+            <div>WhatsApp</div>
+            <div>12h/dia</div>
+            <div>24/7 Urgente</div>
+            <div>24/7 Premium + Gestor</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Monitoramento</div>
+            <div>Básico</div>
+            <div>Simples</div>
+            <div>Avançado + Alertas</div>
+            <div>Total + Relatórios Executivos</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Substituição de Equipamentos</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Formação/Workshops</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Consultoria Estratégica</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div>Básica</div>
+            <div>Total + Planeamento</div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Gestão de Licenças</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="check"><i class="fas fa-check"></i></div>
+          </div>
+          
+          <div class="comparison-row">
+            <div class="feature-name">Backup em Nuvem</div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div class="cross"><i class="fas fa-times"></i></div>
+            <div>Básico</div>
+            <div>Automático + Versões</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta">
+      <div class="container">
+        <h2 style="color: var(--primary); font-size: 2.2rem; margin-bottom: 20px;">Precisa de uma solução personalizada?</h2>
+        <p style="color: #666; font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px;">
+          Tem necessidades específicas? Nossos especialistas podem criar um plano customizado para sua empresa.
+        </p>
+        
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="https://wa.me/258847965281?text=Olá!%20Preciso%20de%20um%20plano%20personalizado%20de%20manutenção" 
+             class="btn btn-primary btn-lg" target="_blank" style="background: var(--primary); border: none; padding: 15px 30px;">
+            <i class="fab fa-whatsapp me-2"></i> WhatsApp Agora
+          </a>
+        </div>
+        
+        <p class="mt-4" style="color: #666; font-size: 0.9rem;">
+          <i class="fas fa-check" style="color: var(--mini-color);"></i> Diagnóstico gratuito • 
+          <i class="fas fa-check" style="color: var(--medium-color);"></i> Sem compromisso • 
+          <i class="fas fa-check" style="color: var(--max-color);"></i> Análise personalizada
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER DINÂMICO COM REDES E EFEITO NETWORK -->
+  <footer class="dynamic-footer" id="contact">
+    <canvas id="networkCanvas"></canvas>
+    <div class="footer-glow"></div>
+    
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <!-- Coluna 1: Logo e Descrição -->
+        <div class="footer-logo-section">
+          <img src="assets/custom/images/srg.png" alt="SRG" class="footer-logo">
+          <p class="footer-description">
+            SRG Logística e Serviços - Sua ponte entre a China e Moçambique. 
+            Soluções completas em logística, procurement, marketing digital e tecnologia.
+          </p>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Início</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+            <li><a href="index.html#logistica"><i class="fas fa-chevron-right"></i> Logística</a></li>
+            <li><a href="index.html#procurement"><i class="fas fa-chevron-right"></i> Procurement</a></li>
+            <li><a href="index.html#marketing-digital"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="index.html#protecao-dados"><i class="fas fa-chevron-right"></i> Segurança de Dados</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contacto -->
+        <div>
+          <h3 class="footer-title">Contacto</h3>
+          <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>AV. Moçambique, Zimpeto<br>Palm Square, Shoprite — Maputo</p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone"></i>
+            <p><a href="tel:+258847965281">+258 84 796 5281</a></p>
+          </div>
+          <div class="contact-info">
+            <i class="fab fa-whatsapp"></i>
+            <p><a href="https://wa.me/258847965281">+258 84 796 5281 (WhatsApp)</a></p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p><a href="mailto:geral@srg.co.mz">geral@srg.co.mz</a></p>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Redes Sociais -->
+        <div>
+          <h3 class="footer-title">Redes Sociais</h3>
+          <div class="social-links">
+            <a href="https://wa.me/258847965281" class="social-link" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/SRGsolutioncenter/" class="social-link" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/srg_solution_center/" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://vm.tiktok.com/ZS9eJVMVPYYky-nzs9t/" class="social-link" target="_blank">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+          <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <p class="copyright" style="margin: 0; width: 100%;">
+                <i class="far fa-copyright"></i> 2025 S.R.G. Todos os direitos reservados.
+            </p>
+        </div>
+
+    
+    </div>
+  </footer>
+
+  
+      
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Script específico para esta página -->
+  <script>
+    // Inicializar AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    
+    // Menu Mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', function() {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('show');
+        menuToggle.innerHTML = menu.classList.contains('show') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
+      });
+      
+      document.querySelectorAll('#menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('show');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+    }
+    
+    // Navegação entre pacotes
+    document.addEventListener('DOMContentLoaded', function() {
+      const packageNavBtns = document.querySelectorAll('.package-nav-btn');
+      const packageContents = document.querySelectorAll('.package-content');
+      
+      packageNavBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Remover classe active de todos os botões
+          packageNavBtns.forEach(b => b.classList.remove('active'));
+          
+          // Adicionar classe active ao botão clicado
+          this.classList.add('active');
+          
+          // Obter o ID do pacote alvo
+          const targetPackage = this.getAttribute('data-package');
+          
+          // Esconder todos os conteúdos
+          packageContents.forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Mostrar conteúdo do pacote selecionado
+          const targetContent = document.getElementById(targetPackage);
+          if (targetContent) {
+            targetContent.classList.add('active');
+            
+            // Scroll suave para o topo do pacote
+            window.scrollTo({
+              top: targetContent.offsetTop - 100,
+              behavior: 'smooth'
+            });
+            
+            // Atualizar URL
+            history.pushState(null, null, '#' + targetPackage);
+          }
+        });
+      });
+      
+      // Verificar pacote na URL ao carregar a página
+      const pacoteHash = window.location.hash.substring(1);
+      
+      if (pacoteHash && (pacoteHash === 's-mini' || pacoteHash === 'r-medium' || pacoteHash === 'g-max' || pacoteHash === 'srg-super-max')) {
+        // Simular clique no botão correspondente
+        const targetBtn = document.querySelector(`.package-nav-btn[data-package="${pacoteHash}"]`);
+        if (targetBtn) {
+          targetBtn.click();
+        }
+      }
+    });
+
+    // Canvas do efeito de rede no footer
+    const canvas = document.getElementById('networkCanvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      const particleCount = 40;
+
+      function init() {
+        width = window.innerWidth;
+        height = document.querySelector('.dynamic-footer').offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
+
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            radius: Math.random() * 4 + 3
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        
+        // Desenhar conexões
+        ctx.strokeStyle = '#FFD400';
+        ctx.lineWidth = 0.8;
+        ctx.globalAlpha = 0.25;
+
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 150) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Desenhar partículas
+        particles.forEach(p => {
+          ctx.shadowColor = '#FFD400';
+          ctx.shadowBlur = 15;
+          
+          ctx.fillStyle = '#FFD400';
+          ctx.globalAlpha = 0.8;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fill();
+          
+          // Centro mais brilhante
+          ctx.shadowBlur = 20;
+          ctx.fillStyle = '#FFFFFF';
+          ctx.globalAlpha = 0.6;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius * 0.5, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Resetar sombra
+        ctx.shadowBlur = 0;
+
+        // Mover partículas
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      init();
+      draw();
+
+      window.addEventListener('resize', () => {
+        width = window.innerWidth;
+        height = document.querySelector('.dynamic-footer').offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
+      });
+    }
+  </script>
+</body>
+</html>
